@@ -11,5 +11,5 @@ class User < ApplicationRecord
   # Validations
   validates :first_name, presence: true
   validates :last_name, presence: true
-  validates :first_name, presence: true, numericality: { greater_than: 19 }
+  validates :age, presence: true, numericality: { greater_than: 19 }
 end
