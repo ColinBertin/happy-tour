@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Add a new tour</h1>
+  <%= simple_form_for(@tour) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :price %>
+    <%= f.input :content %>
+    <%= f.submit %>
+  <% end %>
+</div>
