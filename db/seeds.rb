@@ -16,7 +16,7 @@ puts 'Cleaning the database...'
 Tour.delete_all
 
   kim = User.new(
-    email: "blufairie@gmail.com",
+    email: "test@gmail.com",
     first_name: "Kim",
     last_name: "Methakullachat",
     age: 32,
