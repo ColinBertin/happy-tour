@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'tours#home'
+  root to: 'pages#home'
   namespace :owner do
     resources :bookings, only: [:index]
     resources :tours, only: [:index]
