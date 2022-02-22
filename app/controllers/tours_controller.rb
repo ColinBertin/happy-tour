@@ -1,18 +1,21 @@
 class ToursController < ApplicationController
   def index
-    @tours = Tour.all
+    @tours = policy_scope(Tour).order(created_at: :desc)
   end
 
   def show
-    @tour = Tour.find(parmas[:id])
+    @tour = Tour.find(params[:id])
+    authorize @tour
   end
 
   def new
     @tour = Tour.new
+    authorize @tour
   end
 
   def create
     @tour = Tour.new(tour_params)
+    authorize @tour
     if @tour.save
       redirect_to tours_path
     else
