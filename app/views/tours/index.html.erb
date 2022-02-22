@@ -1,9 +1,13 @@
 <div class="container">
-  <h1>Hello tours</h1>
+  <div class="row">
+    <h1>Hello Tours</h1>
   <% @tours.each do |tour| %>
+    <div class="card-specific mb-4 p-4 border border-primary">
     <h3><%= tour.name %></h3>
     <p><%= tour.address %></p>
     <p><%= tour.price %></p>
     <p><%= tour.content %></p>
-  <% end %>
+      </div>
+    <% end %>
+  </div>
 </div>
