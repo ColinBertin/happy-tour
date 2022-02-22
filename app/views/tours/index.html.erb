@@ -1,9 +1,9 @@
-<div class="container">
+<div class="container mt-4 pt-4">
   <div class="row">
-    <h1>Hello Tours</h1>
+    <strong><h1><%= @tours.length %></strong> HappyTour are Available</h1>
   <% @tours.each do |tour| %>
-      <div class="card-specific mb-4 p-4 border border-primary">
-        <h3><%= tour.name %></h3>
+      <div class="card-specific mb-4 p-4 border border-primary border-2">
+        <h2><%= tour.name %></h2>
         <p><%= tour.address %></p>
         <p><%= tour.price %></p>
         <p><%= tour.content %></p>
