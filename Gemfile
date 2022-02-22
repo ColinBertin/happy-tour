@@ -32,6 +32,9 @@ gem 'bootsnap', '>= 1.4.4', require: false
 # devise gem
 gem 'devise'
 
+# pundit gem
+gem 'pundit'
+
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
 gem 'simple_form'

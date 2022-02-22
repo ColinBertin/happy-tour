@@ -2,7 +2,7 @@ class BookingsController < ApplicationController
   before_action :set_booking
 
   def index
-    @bookings= current_user.bookings
+    @bookings = policy_scope(Booking).order(created_at: :desc)
   end
 
   def create
@@ -10,14 +10,17 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params) #need to give it tour
     @booking.tour = @tour
     @booking.user = current_user
+    authorize @booking
     if @booking.save
       redirect_to bookings_path
     else
-      render "tours/show"
+      render tour_path(@tour)
     end
+  end
 
     def update
       @booking = Booking.find(params[:id])
+      authorize @booking
       if @booking.update(booking_params)
         redirect_to owner_bookings_path
       else
