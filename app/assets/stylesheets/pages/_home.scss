@@ -10,3 +10,14 @@ h3 {
 h1 {
   font-weight: 700;
 }
+
+.background-photo {
+  background-image: linear-gradient(to bottom, #ffeed2, transparent),
+    asset-url("landing.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
