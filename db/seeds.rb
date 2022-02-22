@@ -15,15 +15,43 @@ require 'faker'
 puts 'Cleaning the database...'
 Tour.delete_all
 
+  kim = User.new(
+    email: "blufairie@gmail.com",
+    first_name: "Kim",
+    last_name: "Methakullachat",
+    age: 32,
+    password: "123456"
+  )
+  kim.save!
+
+  takeshi = User.new(
+    email: "takeshi@gmail.com",
+    first_name: "Takeshi",
+    last_name: "Shinohara",
+    age: 33,
+    password: "123456"
+  )
+  takeshi.save!
+
+  colin = User.new(
+    email: "colin@gmail.com",
+    first_name: "Colin",
+    last_name: "Bertin",
+    age: 34,
+    password: "123456"
+  )
+  colin.save!
+
 puts "making 10 fake tours"
-10.times do
+50.times do
   tour = Tour.new(
   name: Faker::Beer.name,
   address: "#{Faker::Address.street_address}",
   price: Faker::Number.within(range: 1000..5000),
   content: "#{Faker::Lorem.paragraph(sentence_count: 10)}"
 )
-  tour.user = User.first
+users = [kim, takeshi, colin]
+  tour.user = users.sample
   tour.save!
 end
 
