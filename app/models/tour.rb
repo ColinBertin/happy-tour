@@ -8,5 +8,5 @@ class Tour < ApplicationRecord
   validates :name, presence: true
   validates :address, presence: true
   validates :price, presence: true, numericality: true
-  validates :content, presence: true, length: { minimun: 50 }
+  validates :content, presence: true, length: { minimum: 50 }
 end

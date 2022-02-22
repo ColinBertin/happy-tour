@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'tours#index'
+  root to: 'pages#home'
   namespace :owner do
     resources :bookings, only: [:index]
     resources :tours, only: [:index]
   end
 
-  resources :tours, only: [:index, :show, :new, :create]
-  resources :bookings, only: [:index, :new, :create, :edit, :update]
+  resources :tours, only: [:index, :show, :new, :create] do
+    resources :booking, only: [:create]
+  end
+  resources :bookings, only: [:index, :update]
 end
