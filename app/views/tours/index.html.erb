@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Hello tours</h1>
+  <% @tours.each do |tour| %>
+    <h3><%= tour.name %></h3>
+    <p><%= tour.address %></p>
+    <p><%= tour.price %></p>
+    <p><%= tour.content %></p>
+  <% end %>
+</div>
