@@ -18,15 +18,15 @@ class BookingsController < ApplicationController
     end
   end
 
-    def update
-      @booking = Booking.find(params[:id])
-      authorize @booking
-      if @booking.update(booking_params)
-        redirect_to owner_bookings_path
-      else
-        redirect_to owner_bookings_path #fix later, to right page
-      end
+  def update
+    @booking = Booking.find(params[:id])
+    authorize @booking
+    if @booking.update(booking_params)
+      redirect_to owner_bookings_path
+    else
+      redirect_to owner_bookings_path #fix later, to right page
     end
+  end
 
     private
     def set_booking
