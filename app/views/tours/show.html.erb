@@ -38,7 +38,13 @@
             <div class="d-flex justify-content-end mb-3">
               <h3>¥<%= @tour.price %></h3>
             </div>
-            <a href="#" class="btn btn-primary w-100 rounded-8">Checkout</a>
+            <% if user_signed_in? %>
+              <%= link_to "Checkout", "#", class: "btn btn-primary w-100 rounded-8" %>
+            <% else %>
+              <%= link_to "Login", new_user_session_path, class: "btn btn-primary w-100 rounded-8" %>
+            <% end %>
+
+            <%# <a href="#" class="btn btn-primary w-100 rounded-8">Checkout</a> %>
           </div>
         </div>
   </div>
