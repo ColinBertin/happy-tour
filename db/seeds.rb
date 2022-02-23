@@ -13,7 +13,8 @@
 require 'faker'
 
 puts 'Cleaning the database...'
-Tour.delete_all
+Booking.destroy_all
+Tour.destroy_all
 User.destroy_all
 
   kim = User.new(
