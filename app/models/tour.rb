@@ -1,7 +1,7 @@
 class Tour < ApplicationRecord
   # Associations
   belongs_to :user # Owner user
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
   has_many :users, through: :bookings # Client user
 
   # Validations
