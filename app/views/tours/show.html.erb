@@ -12,7 +12,7 @@
         <div class="card-no-hover mb-4 p-4 border border-primary border-2">
           <h3>About the Tour Guide</h3>
           <p>Brewer of <%= @tour.name %></p>
-          <p><%= @tour.content %></p>
+          <p>The owner loves to drink all day!</p>
         </div>
     </div>
     <div class="col-md-4">
@@ -23,30 +23,31 @@
             <!-- date may require to be connected to db -->
             <div class="form-group mb-3">
             <label for="exampleFormControlSelect1">How many are you?</label>
-            <select class="form-control id="exampleFormControlSelect1">
+            <select class="form-control id="participant">
               <option>Participants</option>
               <option>1</option>
-              <option>2</option>
+              <%# <option>2</option>
               <option>3</option>
               <option>4</option>
-              <option>5</option>
+              <option>5</option> %>
             </select>
           </div>
-            <div class="d-flex justify-content-between">
+          <p>Time Available</p>
+          <p><strong><%= "#{@tour.start_time}" %>AM</p><strong>
+            <div class="d-flex justify-content-between mt-3">
               <h3><strong>Total</strong></h3>
             </div>
             <div class="d-flex justify-content-end mb-3">
-              <h3>¥<%= @tour.price %></h3>
+              <h3>¥<%= @tour.price%></h3>
             </div>
             <% if user_signed_in? %>
               <%= link_to "Checkout", "#", class: "btn btn-primary w-100 rounded-8" %>
             <% else %>
-              <%= link_to "Login", new_user_session_path, class: "btn btn-primary w-100 rounded-8" %>
+              <%= link_to "Login", new_user_session_path, class: "btn btn-primary w-100 rounded-8"%>
             <% end %>
-
-            <%# <a href="#" class="btn btn-primary w-100 rounded-8">Checkout</a> %>
           </div>
         </div>
   </div>
   </div>
+
 </div>
