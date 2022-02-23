@@ -30,3 +30,37 @@
   bottom: 0;
   width: 100%;
 }
+
+// <!-- new css -->
+.card-product {
+  overflow: hidden;
+  height: 350px;
+  border-radius: 12px;
+  background-color: #fff5e1;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.card-product img {
+  border-radius: 4px;
+  height: 100%;
+  width: 300px;
+  object-fit: cover;
+  border-color: #2b261e;
+}
+
+.card-product h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product p {
+  font-size: 18px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
