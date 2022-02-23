@@ -5,6 +5,7 @@ class Booking < ApplicationRecord
 
   # Validations
   validates :schedule, presence: true
+  validates :participant, presence: true
   enum confirmation: {
     pending: 0,
     confirmed: 1,
