@@ -63,11 +63,7 @@ kirin = Tour.new(
   price: 5000,
   content: "As beer is the most popular alcoholic drink in Japan there are plenty of interesting beers and beer history to discover. Yokohama Factory is one of nine factories of the Kirin Brewery Company, Limited (Chitose, Sendai, Toride, Yokohama, Nagoya, Shiga, Kobe, Okayama, and Fukuoka). Yokohama factory offers free tours that last around 80 minutes.
   A Tour of the Beer Factory
-  The tour winds its way arund parts of the factory, offering views from above through observation windows of various parts of the manufacturing process. As you watch, thousands of cans and bottles of beer go shooting through factory machines at incredibly high speeds! According to the guide, 2000 cans of beer are filled and packed each and every minute. Near the end of the tour, a series of panels of Kirin’s history are on display.
-  Beer Tasting
-  As the tour nears completion you arrive at the “tasting bar”. Here, you receive tickets that you exchange for three glasses of fresh beer—your choice. The selections on tap are “Ichiban-shibori”, “Lager”, and “Stout” (black beer). The beers really hit the spot after walking through the factory.
-  If you are curious about Japanese beer and how it is manufactured, taking a tour at Kirin Beer Village in Yokohama is a very good experience and a lot of fun. As you also receive three different types of beers for free you might like it so much that you go there everyday!
-  Kirin Beer Village in Yokohama is a 7-minute walk from Nama-mugi Station on the Keikyu line. The tours are given to groups of between two to 35 people every 40 minutes, starting at 10:00 AM and finishing at 4:00 PM.",
+  The tour winds its way arund parts of the factory, offering views from above through observation windows of various parts of the manufacturing process. As you watch, thousands of cans and bottles of beer go shooting through factory machines at incredibly high speeds! According to the ",
   start_time: 16,
   end_time: 18,
   user: kim
@@ -79,12 +75,7 @@ asahi = Tour.new(
   address: "1223 Nuda, Minamiashigara, Kanagawa 250-0106",
   price: 5500,
   content: "As beer is the most popular alcoholic drink in Japan there are plenty of interesting beers and beer history to discover. Kanagawa Factory is one of nine factories of the Kirin Brewery Company, Limited (Chitose, Sendai, Toride, Yokohama, Nagoya, Shiga, Kobe, Okayama, and Fukuoka). Yokohama factory offers free tours that last around 80 minutes.
-  A Tour of the Beer Factory
-  The tour winds its way arund parts of the factory, offering views from above through observation windows of various parts of the manufacturing process. As you watch, thousands of cans and bottles of beer go shooting through factory machines at incredibly high speeds! According to the guide, 2000 cans of beer are filled and packed each and every minute. Near the end of the tour, a series of panels of Kirin’s history are on display.
-  Beer Tasting
-  As the tour nears completion you arrive at the “tasting bar”. Here, you receive tickets that you exchange for three glasses of fresh beer—your choice. The selections on tap are “Ichiban-shibori”, “Lager”, and “Stout” (black beer). The beers really hit the spot after walking through the factory.
-  If you are curious about Japanese beer and how it is manufactured, taking a tour at Kirin Beer Village in Yokohama is a very good experience and a lot of fun. As you also receive three different types of beers for free you might like it so much that you go there everyday!
- Asahi Beer Village in Yokohama is a 7-minute walk from Nama-mugi Station on the Keikyu line. The tours are given to groups of between two to 35 people every 40 minutes, starting at 10:00 AM and finishing at 4:00 PM.",
+  A Tour of the Beer Factory.",
   start_time: 16,
   end_time: 18,
   user: kim
@@ -97,11 +88,7 @@ sapporo = Tour.new(
   price: 5500,
   content: "As beer is the most popular alcoholic drink in Japan there are plenty of interesting beers and beer history to discover. Sapporo Factory is one of nine factories of the Kirin Brewery Company, Limited (Chitose, Sendai, Toride, Yokohama, Nagoya, Shiga, Kobe, Okayama, and Fukuoka). Yokohama factory offers free tours that last around 80 minutes.
   A Tour of the Beer Factory
-  The tour winds its way arund parts of the factory, offering views from above through observation windows of various parts of the manufacturing process. As you watch, thousands of cans and bottles of beer go shooting through factory machines at incredibly high speeds! According to the guide, 2000 cans of beer are filled and packed each and every minute. Near the end of the tour, a series of panels of Kirin’s history are on display.
-  Beer Tasting
-  As the tour nears completion you arrive at the “tasting bar”. Here, you receive tickets that you exchange for three glasses of fresh beer—your choice. The selections on tap are “Ichiban-shibori”, “Lager”, and “Stout” (black beer). The beers really hit the spot after walking through the factory.
-  If you are curious about Japanese beer and how it is manufactured, taking a tour at Kirin Beer Village in Yokohama is a very good experience and a lot of fun. As you also receive three different types of beers for free you might like it so much that you go there everyday!
-  Kirin Beer Village in Yokohama is a 7-minute walk from Nama-mugi Station on the Keikyu line. The tours are given to groups of between two to 35 people every 40 minutes, starting at 10:00 AM and finishing at 4:00 PM.",
+  The tour winds its way arund parts of the factory, offering views from above through observation windows of various parts of the manufacturing process.",
   start_time: 11,
   end_time: 13,
   user: kim
@@ -114,11 +101,7 @@ ebisu = Tour.new(
   price: 6500,
   content: "As beer is the most popular alcoholic drink in Japan there are plenty of interesting beers and beer history to discover. Sapporo Factory is one of nine factories of the Kirin Brewery Company, Limited (Chitose, Sendai, Toride, Yokohama, Nagoya, Shiga, Kobe, Okayama, and Fukuoka). Yokohama factory offers free tours that last around 80 minutes.
   A Tour of the Beer Factory
-  The tour winds its way arund parts of the factory, offering views from above through observation windows of various parts of the manufacturing process. As you watch, thousands of cans and bottles of beer go shooting through factory machines at incredibly high speeds! According to the guide, 2000 cans of beer are filled and packed each and every minute. Near the end of the tour, a series of panels of Kirin’s history are on display.
-  Beer Tasting
-  As the tour nears completion you arrive at the “tasting bar”. Here, you receive tickets that you exchange for three glasses of fresh beer—your choice. The selections on tap are “Ichiban-shibori”, “Lager”, and “Stout” (black beer). The beers really hit the spot after walking through the factory.
-  If you are curious about Japanese beer and how it is manufactured, taking a tour at Kirin Beer Village in Yokohama is a very good experience and a lot of fun. As you also receive three different types of beers for free you might like it so much that you go there everyday!
-  Kirin Beer Village in Yokohama is a 7-minute walk from Nama-mugi Station on the Keikyu line. The tours are given to groups of between two to 35 people every 40 minutes, starting at 10:00 AM and finishing at 4:00 PM.",
+  The tour winds its way arund parts of the factory, offering views from above through observation windows of various parts of the manufacturing process. As you watch, thousands of cans and bottles of beer go shooting through factory machines at incredibly high speeds! According to the guide, 2000 cans of beer are filled and packed each and every minute. Near the end of the tour, a series of panels of Kirin’s history are on display.",
   start_time: 11,
   end_time: 13,
   user: takeshi
@@ -131,11 +114,7 @@ hoegaarden = Tour.new(
   price: 6500,
   content: "As beer is the most popular alcoholic drink in Japan there are plenty of interesting beers and beer history to discover. Sapporo Factory is one of nine factories of the Kirin Brewery Company, Limited (Chitose, Sendai, Toride, Yokohama, Nagoya, Shiga, Kobe, Okayama, and Fukuoka). Yokohama factory offers free tours that last around 80 minutes.
   A Tour of the Beer Factory
-  The tour winds its way arund parts of the factory, offering views from above through observation windows of various parts of the manufacturing process. As you watch, thousands of cans and bottles of beer go shooting through factory machines at incredibly high speeds! According to the guide, 2000 cans of beer are filled and packed each and every minute. Near the end of the tour, a series of panels of Kirin’s history are on display.
-  Beer Tasting
-  As the tour nears completion you arrive at the “tasting bar”. Here, you receive tickets that you exchange for three glasses of fresh beer—your choice. The selections on tap are “Ichiban-shibori”, “Lager”, and “Stout” (black beer). The beers really hit the spot after walking through the factory.
-  If you are curious about Japanese beer and how it is manufactured, taking a tour at Kirin Beer Village in Yokohama is a very good experience and a lot of fun. As you also receive three different types of beers for free you might like it so much that you go there everyday!
-  Kirin Beer Village in Yokohama is a 7-minute walk from Nriama-mugi Station on the Keikyu line. The tours are given to groups of between two to 35 people every 40 minutes, starting at 10:00 AM and finishing at 4:00 PM.",
+  The tour winds its way arund parts of the factory, offering views from above through observation windows of various parts of the manufacturing process.",
   start_time: 14,
   end_time: 16,
   user: colin
@@ -158,10 +137,7 @@ singha = Tour.new(
   address: "999 Samsen Road, Dusit, Bangkok 10300 Thailand",
   price: 3000,
   content: "Boon Rawd Brewery was the first to open in Thailand and produces its beer under the brand name of Singha. It was founded in the early 1930s by Boonrawd Sreshthaputra, who had received the title of Phraya Bhirom Bhakdi from HM King Prajadhipok. The brewery remains under the management of his descendants, who use Bhirom Bhakdi as their family name.
-
-  The Singha is an Asian lion, but in both Hindu and Thai traditional tales, it is a powerful mythological creature. It was chosen because it is an easily recognizable symbol. The Garuda on the bottle's neck shows Boonrawd Brewery's royal approval, which is granted only to companies with a long-standing favorable reputation. It received this on 25 October 1939, by a royal warrant signed by King Rama VII's Regent. Boon Rawd is the only brewery in Thailand to receive such a right.[4]
-
-  In 1994, Boon Rawd Brewery bought a brewery in Hartmannsdorf and another in Mittweida, Saxony. Until 2001, these had produced Singha Gold for the European market under contract, although Singha beer itself has always been brewed in Thailand. Today, all Singha brands are only made in Thailand.",
+  The Singha is an Asian lion, but in both Hindu and Thai traditional tales, it is a powerful mythological creature. It was chosen because it is an easily recognizable symbol.",
   start_time: 10,
   end_time: 12,
   user: kim
@@ -178,5 +154,31 @@ blanche = Tour.new(
   user: colin
 )
 blanche.save!
+
+booking_a = Booking.new(
+  schedule: Date.new,
+  confirmation: 0,
+  user: colin,
+  tour: blanche
+)
+booking_a.save!
+
+booking_b = Booking.new(
+  schedule: Date.new,
+  confirmation: 0,
+  user: colin,
+  tour: singha
+)
+booking_b.save!
+
+booking_c = Booking.new(
+  schedule: Date.new,
+  confirmation: 0,
+  user: colin,
+  tour: guiness
+)
+booking_c.save!
+
+
 
   puts "#{Tour.count} tours have been created"
