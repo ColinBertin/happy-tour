@@ -156,7 +156,7 @@ blanche = Tour.new(
 blanche.save!
 
 booking_a = Booking.new(
-  schedule: Date.new,
+  schedule: "2pm : 4pm",
   confirmation: 0,
   user: colin,
   tour: blanche
@@ -164,7 +164,7 @@ booking_a = Booking.new(
 booking_a.save!
 
 booking_b = Booking.new(
-  schedule: Date.new,
+  schedule: "2pm : 4pm",
   confirmation: 0,
   user: colin,
   tour: singha
@@ -172,7 +172,7 @@ booking_b = Booking.new(
 booking_b.save!
 
 booking_c = Booking.new(
-  schedule: Date.new,
+  schedule: "2pm : 4pm",
   confirmation: 0,
   user: colin,
   tour: guiness

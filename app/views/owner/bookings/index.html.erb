@@ -1,8 +1,17 @@
 <div class="container">
   <h1>My bookings</h1>
   <% if @bookings.length == 0 %>
-    <h2>No bookings</h2>
+    <h2>No bookings yet</h2>
   <% else %>
-    <h2>bookings</h2>
+    <% @bookings.each do |booking| %>
+      <div class="card-product mb-4 p-4 border border-primary border-2">
+        <div class="ms-4 card-product-infos">
+        <h2><%= booking.tour.name %></h2>
+        <p>Your booking time: <%= booking.schedule %></p>
+        <p><%= booking.tour.content %></p>
+        <p>Booking status : <span class="<%= booking.confirmation == 1 ? "text-success" : "text-warning" %>"><%= booking.confirmation %></span></p>
+      </div>
+      </div>
+    <% end %>
   <% end %>
 </div>
