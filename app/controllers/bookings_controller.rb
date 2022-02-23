@@ -6,6 +6,7 @@ class BookingsController < ApplicationController
   end
 
   def create
+    raise
     @tour = Tour.find(params[:tour_id])
     @booking = Booking.new(booking_params) #need to give it tour
     @booking.tour = @tour
