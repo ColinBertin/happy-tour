@@ -2,60 +2,55 @@
 </div>
 <div class="container mt-4 pt-4">
   <h1><%= @tour.name %></h1>
-    <div class="row">
-      <div class="col-md-8">
-        <div class="card-no-hover mb-4 p-4 border border-primary border-2">
-          <h3>Starting at ¥<%= @tour.price %></h3>
-          <p><%= @tour.address %></p>
-          <p><%= @tour.content %></p>
-        </div>
-        <div class="card-no-hover mb-4 p-4 border border-primary border-2">
-          <h3>About the Tour Guide</h3>
-          <p>Brewer of <%= @tour.name %></p>
-          <p><%= @tour.content %></p>
-        </div>
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card-no-hover mb-4 p-4 border border-primary border-2">
+        <h3>Starting at ¥<%= @tour.price %></h3>
+        <p><%= @tour.address %></p>
+        <p><%= @tour.content %></p>
+      </div>
+      <div class="card-no-hover mb-4 p-4 border border-primary border-2">
+        <h3>About the Tour Guide</h3>
+        <p>Brewer of <%= @tour.name %></p>
+        <p><%= @tour.content %></p>
+      </div>
     </div>
     <div  data-controller="modal" class="col-md-4">
-        <div class="card-no-hover mb-4 p-4 border border-primary border-2">
-            <div class="d-flex justify-content-between mt-3">
-              <h3>Request a Tour</3>
-            </div>
-            <!-- date may require to be connected to db -->
-            <div class="form-group mb-3">
-            <label for="exampleFormControlSelect1">How many are you?</label>
-            <select class="form-control id="exampleFormControlSelect1">
-              <option>Participants</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </div>
-            <div class="d-flex justify-content-between">
-              <h3><strong>Total</strong></h3>
-            </div>
-            <div class="d-flex justify-content-end mb-3">
-              <h3>¥<%= @tour.price %></h3>
-            </div>
-            <% if user_signed_in? %>
-            <%= simple_form_for[ @tour, @booking ] do |f| %>
-              <%= f.input :schedule %>
-              <%= f.submit %>
-            <% end %>
-           <%= link_to "Checkout", tour_bookings_path(@tour), class: "btn btn-primary w-100 rounded-8"%>
-            <% else %>
-              <%= link_to "Login", new_user_session_path, class: "btn btn-primary w-100 rounded-8" %>
-            <% end %>
-
-          <%= render "shared/modal"%>
-
-            <%# <a href="#" class="btn btn-primary w-100 rounded-8">Checkout</a> %>
-          </div>
+      <div class="card-no-hover mb-4 p-4 border border-primary border-2">
+        <div class="d-flex justify-content-between mt-3">
+          <h3>Request a Tour</3>
         </div>
-  </div>
+        <!-- date may require to be connected to db -->
+        <div class="form-group mb-3">
+          <label for="exampleFormControlSelect1">How many are you?</label>
+          <select class="form-control id="exampleFormControlSelect1">
+            <option>Participants</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <div class="d-flex justify-content-between">
+          <h3><strong>Total</strong></h3>
+        </div>
+        <div class="d-flex justify-content-end mb-3">
+          <h3>¥<%= @tour.price %></h3>
+        </div>
+        <% if user_signed_in? %>
+          <%= simple_form_for [ @tour, @booking ] do |f| %>
+            <%= f.input :schedule, collection: ['14:00 to 15:00','16:00 to 17:00','17:00 to 18:00']%>
+            <%= f.submit class: "btn btn-primary w-100 rounded-8" %>
+          <% end %>
+        <% else %>
+          <%= link_to "Login", new_user_session_path, class: "btn btn-primary w-100 rounded-8" %>
+        <% end %>
+        <%= render "shared/modal"%>
+        <%# <a href="#" class="btn btn-primary w-100 rounded-8">Checkout</a> %>
+      </div>
+    </div>
   </div>
 </div>
-
-
+</div>
 <!-- Trigger the modal with a button -->

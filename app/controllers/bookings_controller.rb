@@ -1,12 +1,11 @@
 class BookingsController < ApplicationController
-  before_action :set_booking
+  before_action :set_booking, only: [ :update ]
 
   def index
     @bookings = policy_scope(Booking).order(created_at: :desc)
   end
 
   def create
-    raise
     @tour = Tour.find(params[:tour_id])
     @booking = Booking.new(booking_params) #need to give it tour
     @booking.tour = @tour
