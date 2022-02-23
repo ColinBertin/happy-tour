@@ -2,12 +2,15 @@
   <div class="row">
     <strong><h1><%= @tours.length %></strong> HappyTour are Available</h1>
   <% @tours.each do |tour| %>
-      <div class="card-specific mb-4 p-4 border border-primary border-2">
+      <div class="card-product mb-4 p-4 border border-primary border-2">
+        <%= image_tag "brew_photos/#{rand(12)}.jpg" %>
+        <div class="ms-4 card-product-infos">
         <h2><%= tour.name %></h2>
         <p><%= tour.address %></p>
         <p><%= tour.price %></p>
         <p><%= tour.content %></p>
         <%= link_to '', tour_path(tour), class: 'card-link' %>
+      </div>
       </div>
     <% end %>
   </div>
