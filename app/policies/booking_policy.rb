@@ -2,15 +2,25 @@ class BookingPolicy < ApplicationPolicy
   class Scope < Scope
     # NOTE: Be explicit about which records you allow access to!
     def resolve
-      scope.all
+      scope.where(user: user)
     end
   end
 
   def new?
-    true
+    user_is_admin?
   end
 
   def create?
-    true
+    user_is_admin?
+  end
+
+  def update?
+    user_is_admin?
+  end
+
+  private
+
+  def user_is_admin?
+    user.admin?
   end
 end

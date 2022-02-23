@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Owner::Tours#index</h1>
+  <% if @tours.length == 0 %>
+    <h2>No tours added yet</h2>
+  <% else %>
+    <% @tours.each do |tour| %>
+      <div class="card-product mb-4 p-4 border border-primary border-2">
+        <div class="ms-4 card-product-infos">
+          <h2><%= tour.name %></h2>
+          <p>Your booking time: <%= tour.content %></p>
+          <p>The owner of this tour is: <%= tour.user.first_name %></p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

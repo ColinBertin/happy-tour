@@ -9,7 +9,11 @@
         <h2><%= booking.tour.name %></h2>
         <p>Your booking time: <%= booking.schedule %></p>
         <p><%= booking.tour.content %></p>
+        <p><%= booking.user.first_name %></p>
         <p>Booking status : <span class="<%= booking.confirmation == 1 ? "text-success" : "text-warning" %>"><%= booking.confirmation %></span></p>
+        <% if policy(booking).update? %>
+          <%= link_to "Update", booking_path(booking) %>
+        <% end %>
       </div>
       </div>
     <% end %>
