@@ -1,9 +1,22 @@
 .cards {
-  background-color: #FFF5E1;
+  background-color: #fff5e1;
 }
 
 .card-specific {
-  background-color: #FFF5E1;
+  background-color: #fff5e1;
+  border-color: #2b261e;
+  border-radius: 8px;
+  text-decoration: none;
+  position: relative;
+
+  &:hover {
+    box-shadow: 0px 8px 15px rgba(89, 88, 70, 0.4);
+  }
+
+}
+
+.card-no-hover {
+  background-color: #fff5e1;
   border-color: #2b261e;
   border-radius: 8px;
   text-decoration: none;
