@@ -14,13 +14,15 @@ require 'faker'
 
 puts 'Cleaning the database...'
 Tour.delete_all
+User.destroy_all
 
   kim = User.new(
     email: "test@gmail.com",
     first_name: "Kim",
     last_name: "Methakullachat",
     age: 32,
-    password: "123456"
+    password: "123456",
+    admin: true
   )
   kim.save!
 
@@ -29,7 +31,8 @@ Tour.delete_all
     first_name: "Takeshi",
     last_name: "Shinohara",
     age: 33,
-    password: "123456"
+    password: "123456",
+    admin: true
   )
   takeshi.save!
 
@@ -38,7 +41,8 @@ Tour.delete_all
     first_name: "Colin",
     last_name: "Bertin",
     age: 34,
-    password: "123456"
+    password: "123456",
+    admin: true
   )
   colin.save!
 
