@@ -10,19 +10,15 @@ class TourPolicy < ApplicationPolicy
     true
   end
 
-  def new?
-    user_is_admin?
-  end
-
   def create?
-    user_is_admin?
+    user.present?
   end
 
   private
 
-  # def user_is_owner?
-  #   user == record.user
-  # end
+  def user_is_owner?
+    user == record.user
+  end
 
   def user_is_admin?
     user.admin?
