@@ -5,5 +5,19 @@
     <p><%= booking.schedule %></p>
     <p>The customer's name is: <%= booking.user.first_name %></p>
     <p class="border-bottom">The owner of this tour is: <%= booking.tour.user.first_name %></p>
+    <% if booking.pending? %>
+    <%= simple_form_for booking do |f| %>
+      <%= f.input :confirmation, as: :hidden, input_html: { value: 'confirmed'} %>
+      <%= f.submit 'Accept', class: 'btn btn-info' %>
+    <% end %>
+    <%= simple_form_for booking do |f| %>
+      <%= f.input :confirmation, as: :hidden, input_html: { value: 'declined'} %>
+      <%= f.submit 'Reject', class: 'btn btn-info' %>
+    <% end %>
+  <!-- Display Forms-->
+    <% else %>
+  <!-- Display Status-->
+      <p class='booking-tag'><%= booking.confirmation %></p>
+    <% end %>
   <% end %>
 </div>
