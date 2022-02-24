@@ -1,19 +1,16 @@
 class ToursController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show ] # :show if we want to
   def index
-
     @tours = policy_scope(Tour).order(created_at: :desc)
-
-    @markers = @tours.geocoded.map do |tour|
-      { lat: tour.latitude,
-        lng: tour.longitude }
-
     if params[:query].present?
       tours = policy_scope(Tour).search_by_address(params[:query]).order(created_at: :desc)
       @tours = tours
     else
       @tours = policy_scope(Tour).order(created_at: :desc)
-
+    end
+    @markers = @tours.geocoded.map do |tour|
+      { lat: tour.latitude,
+        lng: tour.longitude }
     end
   end
 
