@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Owner::Tours#index</h1>
+  <% if @tours.length == 0 %>
+    <h2>No tours added yet</h2>
+  <% else %>
+    <% @tours.each do |tour| %>
+      <%= render "tours/tour", tour: tour %>
+    <% end %>
+  <% end %>
+</div>

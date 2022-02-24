@@ -1,10 +1,13 @@
 <div class="container">
   <h1>Add a new tour</h1>
   <%= simple_form_for(@tour) do |f| %>
-    <%= f.input :name %>
-    <%= f.input :address %>
-    <%= f.input :price %>
-    <%= f.input :content %>
+    <%= f.input :name, placeholder: 'Name of the tour' %>
+    <%= f.input :address, placeholder: 'Address' %>
+    <%= f.input :price, value: '¥1200' %>
+    <%= f.input :content, placeholder: 'Please explain the contant of your tour...' %>
+    <%= f.input :start_time, :collection => 10..18 %>
+    <%= f.input :end_time, :collection => 12..20 %>
+    <%= f.input :photo, as: :file %>
     <%= f.submit %>
   <% end %>
 </div>

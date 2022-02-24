@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Owner::Bookings#index</h1>
+  <% @bookings.each do |booking|%>
+    <h2><%= booking.tour.name %></h2>
+    <p><%= booking.schedule %></p>
+    <p>The customer's name is: <%= booking.user.first_name %></p>
+    <p class="border-bottom">The owner of this tour is: <%= booking.tour.user.first_name %></p>
+  <% end %>
+</div>

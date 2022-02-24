@@ -1,8 +1,9 @@
-class Owner::BookingPolicy < ApplicationPolicy
+class Owner::TourPolicy < ApplicationPolicy
   class Scope < Scope
     # NOTE: Be explicit about which records you allow access to!
     def resolve
-      scope.joins(:tour).where(tours: { user: user })
+      # scope.all
+      scope.where(user: user)
     end
   end
 end
