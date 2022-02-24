@@ -1,7 +1,12 @@
 class ToursController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show ] # :show if we want to
   def index
-    @tours = policy_scope(Tour).order(created_at: :desc)
+    if params[:query].present?
+      tours = Tour.search_by_address(params[:query])
+      @tours = policy_scope(tours).order(created_at: :desc)
+    else
+      @tours = Tour.all
+    end
   end
 
   def show
