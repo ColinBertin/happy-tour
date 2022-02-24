@@ -3,7 +3,9 @@
 <div class="col-lg-6" id="top-div">
     <strong><h1><%= @tours.length %></strong> HappyTours are Available</h1>
     <% @tours.each do |tour| %>
-      <%= render "tours/tour", tour: tour %>
+      <% if tour.user != current_user %>
+        <%= render "tours/tour", tour: tour %>
+      <% end %>
     <% end %>
   </div>
 
