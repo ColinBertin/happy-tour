@@ -3,6 +3,7 @@ class Tour < ApplicationRecord
   belongs_to :user # Owner user
   has_many :bookings, dependent: :destroy
   has_many :users, through: :bookings # Client user
+  has_one_attached :photo
 
   # Validations
   validates :name, presence: true
