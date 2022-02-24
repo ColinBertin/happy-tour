@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2022_02_24_030113) do
   end
 
   create_table "bookings", force: :cascade do |t|
-    t.string "schedule"
+    t.date "schedule"
     t.integer "confirmation", default: 0
     t.bigint "user_id", null: false
     t.bigint "tour_id", null: false

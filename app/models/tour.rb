@@ -10,4 +10,11 @@ class Tour < ApplicationRecord
   validates :address, presence: true
   validates :price, presence: true, numericality: true
   validates :content, presence: true, length: { minimum: 50 }
+
+  include PgSearch::Model  #Added PG Search , not sure how to use exactly
+  pg_search_scope :search_by_address,
+    against: [ :address],
+    using: {
+      tsearch: { prefix: true }
+    }
 end
