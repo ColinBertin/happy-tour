@@ -6,21 +6,25 @@ class BookingPolicy < ApplicationPolicy
     end
   end
 
-  def new?
-    user_is_admin?
-  end
-
   def create?
-    user_is_admin?
+    user.present? && !user_is_tour_owner?
   end
 
   def update?
-    user_is_admin?
+    user_is_guest? || user_is_tour_owner?
   end
 
   private
 
   def user_is_admin?
     user.admin?
+  end
+
+  def user_is_guest?
+    user == record.user
+  end
+
+  def user_is_tour_owner?
+    user == record.tour.user
   end
 end

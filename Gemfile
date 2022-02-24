@@ -32,11 +32,13 @@ gem 'bootsnap', '>= 1.4.4', require: false
 # additonal
 gem 'devise'
 gem 'faker'
-gem 'pundit'
 
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
 gem 'simple_form'
+
+# .env file
+gem 'dotenv-rails', groups: [:development, :test]
 
 
 group :development, :test do

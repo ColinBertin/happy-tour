@@ -10,12 +10,8 @@ class TourPolicy < ApplicationPolicy
     true
   end
 
-  def new?
-    user_is_admin?
-  end
-
   def create?
-    user_is_admin?
+    user.present?
   end
 
   private
