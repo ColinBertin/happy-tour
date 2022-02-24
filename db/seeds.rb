@@ -18,7 +18,7 @@ Tour.destroy_all
 User.destroy_all
 
   kim = User.new(
-    email: "test@gmail.com",
+    email: "kim@gmail.com",
     first_name: "Kim",
     last_name: "Methakullachat",
     age: 32,
@@ -47,7 +47,7 @@ User.destroy_all
   )
   colin.save!
 
-puts "making 5 fake tours"
+puts "making fake tours"
 
 #   tour = Tour.new(
 #   name: Faker::Beer.name,
@@ -60,8 +60,8 @@ puts "making 5 fake tours"
 
 kirin = Tour.new(
   name: "Kirin Lovers",
-  address: "1 Chome-17-1 Namamugi, Tsurumi Ward, Yokohama, Kanagawa 230-8628",
-  price: 5000,
+  address: "1 Chome-7-1 Namamugi, Tsurumi Ward, Yokohama, Kanagawa",
+  price: 4000,
   content: "As beer is the most popular alcoholic drink in Japan there are plenty of interesting beers and beer history to discover. Yokohama Factory is one of nine factories of the Kirin Brewery Company, Limited (Chitose, Sendai, Toride, Yokohama, Nagoya, Shiga, Kobe, Okayama, and Fukuoka). Yokohama factory offers free tours that last around 80 minutes.
   A Tour of the Beer Factory
   The tour winds its way arund parts of the factory, offering views from above through observation windows of various parts of the manufacturing process. As you watch, thousands of cans and bottles of beer go shooting through factory machines at incredibly high speeds! According to the ",
@@ -73,8 +73,8 @@ kirin.save!
 
 asahi = Tour.new(
   name: "Good Times With Asahi",
-  address: "1223 Nuda, Minamiashigara, Kanagawa 250-0106",
-  price: 5500,
+  address: "1 Chome-20-1 Namamugi, Tsurumi Ward, Yokohama, Kanagawa",
+  price: 400,
   content: "As beer is the most popular alcoholic drink in Japan there are plenty of interesting beers and beer history to discover. Kanagawa Factory is one of nine factories of the Kirin Brewery Company, Limited (Chitose, Sendai, Toride, Yokohama, Nagoya, Shiga, Kobe, Okayama, and Fukuoka). Yokohama factory offers free tours that last around 80 minutes.
   A Tour of the Beer Factory.",
   start_time: 16,
@@ -85,9 +85,9 @@ asahi.save!
 
 sapporo = Tour.new(
   name: "Sapporo Beer",
-  address: "708-1 Hamatome, Yaizu, Shizuoka 425-0012",
-  price: 5500,
-  content: "As beer is the most popular alcoholic drink in Japan there are plenty of interesting beers and beer history to discover. Sapporo Factory is one of nine factories of the Kirin Brewery Company, Limited (Chitose, Sendai, Toride, Yokohama, Nagoya, Shiga, Kobe, Okayama, and Fukuoka). Yokohama factory offers free tours that last around 80 minutes.
+  address: "1 Chome-2-8 Namamugi, Tsurumi Ward, Yokohama, Kanagawa",
+  price: 500,
+  content: "Do you want to build a snowman? There is always beer to drink. As beer is the most popular alcoholic drink in Japan there are plenty of interesting beers and beer history to discover. Sapporo Factory is one of nine factories of the Kirin Brewery Company, Limited (Chitose, Sendai, Toride, Yokohama, Nagoya, Shiga, Kobe, Okayama, and Fukuoka). Yokohama factory offers free tours that last around 80 minutes.
   A Tour of the Beer Factory
   The tour winds its way arund parts of the factory, offering views from above through observation windows of various parts of the manufacturing process.",
   start_time: 11,
@@ -98,7 +98,7 @@ sapporo.save!
 
 ebisu = Tour.new(
   name: "Ebisu Garden Place",
-  address: "150-8522 Tokyo, Shibuya City, Ebisu, 4 Chome−20−1 ",
+  address: "4 Chome-2-8 Shibakoen, Tokyo",
   price: 6500,
   content: "As beer is the most popular alcoholic drink in Japan there are plenty of interesting beers and beer history to discover. Sapporo Factory is one of nine factories of the Kirin Brewery Company, Limited (Chitose, Sendai, Toride, Yokohama, Nagoya, Shiga, Kobe, Okayama, and Fukuoka). Yokohama factory offers free tours that last around 80 minutes.
   A Tour of the Beer Factory
@@ -111,9 +111,9 @@ ebisu.save!
 
 hoegaarden = Tour.new(
   name: "Hoegaarden Brewery",
-  address: "150-8522 Tokyo, Shibuya City, Ebisu, 4 Chome−20−1 ",
+  address: "5 Chome-1 Kaigandori, Minato Ward, Osaka",
   price: 6500,
-  content: "As beer is the most popular alcoholic drink in Japan there are plenty of interesting beers and beer history to discover. Sapporo Factory is one of nine factories of the Kirin Brewery Company, Limited (Chitose, Sendai, Toride, Yokohama, Nagoya, Shiga, Kobe, Okayama, and Fukuoka). Yokohama factory offers free tours that last around 80 minutes.
+  content: "Green is my favorite drink. As beer is the most popular alcoholic drink in Japan there are plenty of interesting beers and beer history to discover. Sapporo Factory is one of nine factories of the Kirin Brewery Company, Limited (Chitose, Sendai, Toride, Yokohama, Nagoya, Shiga, Kobe, Okayama, and Fukuoka). Yokohama factory offers free tours that last around 80 minutes.
   A Tour of the Beer Factory
   The tour winds its way arund parts of the factory, offering views from above through observation windows of various parts of the manufacturing process.",
   start_time: 14,
@@ -124,7 +124,7 @@ hoegaarden.save!
 
 guiness = Tour.new(
   name: "Guinness Storehouse",
-  address: "St. James's Gate, Dublin 8, D08 VF8H, Ireland",
+  address: "10 Chome-1 Kaigandori, Minato Ward, Osaka",
   price: 10_000,
   content: "Making innovative beer requires an unprecedented pioneering spirit and an indomitable spirit of pursuing perfection. In 1759, Arthur Guinness signs a 9000-year lease with St. James Gate Brewery. Shortly thereafter, Guinness began to entertain in various countries across the sea. Guinness's pioneering spirit has been passed down uninterrupted and has continued to evolve over time. As long as we have beer to continue to make, we will continue to move forward.",
   start_time: 9,
@@ -147,7 +147,7 @@ singha.save!
 
 blanche = Tour.new(
   name: "Blanche de Bruxelles",
-  address: "102-0084 Tokyo, Chiyoda City, Nibancho, 5-4",
+  address: "1 Chome-1 Kaigandori, Minato Ward, Osaka",
   price: 6000,
   content: "The Lefebvre brewery created this wonderful brew and proudly presents this product at our online store. Blanche de Bruxelles is white coloured and has quite a full and creamy head. This glorious craft beer has a beautiful body and a wonderful aroma. 5 generations ago the Lefebvre brewery started brewing this gorgeous wheat beer. They use water, barley malt, wheat, hop, sugar, yeast and coriander. The brewery advises to serve this bright beer at 2 to 5°C.",
   start_time: 10,
@@ -179,7 +179,5 @@ booking_c = Booking.new(
   tour: guiness
 )
 booking_c.save!
-
-
 
   puts "#{Tour.count} tours have been created"

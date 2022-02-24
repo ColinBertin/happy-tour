@@ -1,4 +1,6 @@
 class Tour < ApplicationRecord
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
   # Associations
   belongs_to :user # Owner user
   has_many :bookings, dependent: :destroy
