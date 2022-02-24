@@ -20,39 +20,32 @@
         <div class="d-flex justify-content-between mt-3">
           <h3>Request a Tour</h3>
         </div>
+        <i>90 mins. per tour </i>
         <!-- date may require to be connected to db -->
         <div class="form-group mb-3">
-          <!--<label for="exampleFormControlSelect1">How many are you?</label>
-          <select class="form-control" id="participant">
-            <option>Participants</option>
-            <option>1</option>
-            <%# <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option> %>
-          </select>-->
         </div>
-          <strong>
-            <div class="d-flex justify-content-between mt-3">
-              <h3><strong>Total</strong></h3>
-            </div>
-            <div class="d-flex justify-content-end mb-3">
-              <h3>¥<%= @tour.price%></h3>
-            </div>
-            <% if user_signed_in? %>
-              <%= simple_form_for [ @tour, @booking ] do |f| %>
-                <%= f.input :schedule, collection: ['14:00 to 15:00','16:00 to 17:00','17:00 to 18:00']%>
-                <%= f.submit class: "btn btn-primary w-100 rounded-8" %>
-              <% end %>
-            <% else %>
-              <%= link_to "Login", new_user_session_path, class: "btn btn-primary w-100 rounded-8" %>
-            <% end %>
+        <strong>
+          <div class="d-flex justify-content-between mt-3">
           </div>
+          <% if user_signed_in? %>
+          <div class="d-flex justify-content-end mb-3">
+          <h2><%= number_to_currency(@tour.price, {unit: '¥', precision: 0}) %></h2>
+              </div>
+
+            <%= simple_form_for [ @tour, @booking ] do |f| %>
+              <%= f.input :schedule, collection: Booking::TIMESLOT, include_blank: false %>
+              <%= f.input :participant, html5: true %>
+              <%= f.submit class: "btn btn-primary w-100 rounded-8" %>
+            <% end %>
+          <% else %>
+            <%= link_to "Login", new_user_session_path, class: "btn btn-primary w-100 rounded-8" %>
+          <% end %>
         </div>
-        <%# <a href="#" class="btn btn-primary w-100 rounded-8">Checkout</a> %>
       </div>
+      <%# <a href="#" class="btn btn-primary w-100 rounded-8">Checkout</a> %>
     </div>
   </div>
+</div>
 </div>
 </div>
 <!-- Trigger the modal with a button -->
