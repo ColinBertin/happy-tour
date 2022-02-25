@@ -3,7 +3,7 @@
         <div class="ms-4 card-product-infos">
         <h2><%= tour.name %></h2>
         <p><%= tour.address %></p>
-        <p><%= tour.price %></p>
+        <p><strong>¥<%= tour.price %></p></strong>
         <p><%= tour.content %></p>
         <% if tour.user != current_user %>
           <%= link_to '', tour_path(tour), class: 'card-link' %>

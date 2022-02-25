@@ -1,4 +1,5 @@
 <div class="container">
+<div class = "card-no-hover p-4 m-4 border border-primary border-2">
   <h1>Add a new tour</h1>
   <%= simple_form_for(@tour) do |f| %>
     <%= f.input :name, placeholder: 'Name of the tour' %>
@@ -8,6 +9,7 @@
     <%= f.input :start_time, html5: true %>
     <%= f.input :duration, :collection => 1..5 %>
     <%= f.input :photo, as: :file %>
-    <%= f.submit %>
+    <%= f.submit class: 'button mt-2 wt-100' %>
   <% end %>
+  </div>
 </div>
