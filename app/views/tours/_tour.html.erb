@@ -5,8 +5,8 @@
         <p><%= tour.address %></p>
         <p><%= tour.price %></p>
         <p><%= tour.content %></p>
-        <% if tour.user != current_user %>
           <%= link_to '', tour_path(tour), class: 'card-link' %>
-        <% end %>
+        <!--<% if tour.user != current_user %>
+        <% end %>-->
   </div>
 </div>

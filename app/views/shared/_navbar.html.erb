@@ -22,8 +22,9 @@
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Your Bookings", bookings_path, method: :get, class: "dropdown-item" %>
               <%= link_to "Add a tour", new_tour_path, method: :get, class: "dropdown-item" %>
-              <%= link_to "Your Tours", owner_tours_path, method: :get, class: "dropdown-item" %>
-              <%= link_to "Your cutomers booking", owner_bookings_path, method: :get, class: "dropdown-item" %>
+                <%= link_to "Your Tours", owner_tours_path, method: :get, class: "dropdown-item" %>
+                <%= link_to "Your cutomers booking", owner_bookings_path, method: :get, class: "dropdown-item" %>
+
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
           </li>
