@@ -11,6 +11,7 @@
 # user
 
 require 'faker'
+require 'date'
 
 puts 'Cleaning the database...'
 Booking.destroy_all
@@ -49,23 +50,13 @@ User.destroy_all
 
 puts "making fake tours"
 
-#   tour = Tour.new(
-#   name: Faker::Beer.name,
-#   address: "#{Faker::Address.street_address}",
-#   price: Faker::Number.within(range: 1000..5000),
-#   content: "#{Faker::Lorem.paragraph(sentence_count: 10)}"
-#   user: colin
-# )
-# tour.save!
-
 kirin = Tour.new(
   name: "Kirin Lovers",
   address: "1 Chome-7-1 Namamugi, Tsurumi Ward, Yokohama, Kanagawa",
   price: 4000,
-  content: "As beer is the most popular alcoholic drink in Japan there are plenty of interesting beers and beer history to discover. Yokohama Factory is one of nine factories of the Kirin Brewery Company, Limited (Chitose, Sendai, Toride, Yokohama, Nagoya, Shiga, Kobe, Okayama, and Fukuoka). Yokohama factory offers free tours that last around 80 minutes.
-  A Tour of the Beer Factory
-  The tour winds its way arund parts of the factory, offering views from above through observation windows of various parts of the manufacturing process. As you watch, thousands of cans and bottles of beer go shooting through factory machines at incredibly high speeds! According to the ",
-  start_time: 16,
+  content: "As beer is the most popular alcoholic drink in
+  Japan there are plenty of interesting beers and beer history to discover.",
+  start_time: rand(Date.today..Date.today+30.days),
   duration: 3,
   user: kim
 )
@@ -75,9 +66,9 @@ asahi = Tour.new(
   name: "Good Times With Asahi",
   address: "1 Chome-20-1 Namamugi, Tsurumi Ward, Yokohama, Kanagawa",
   price: 400,
-  content: "As beer is the most popular alcoholic drink in Japan there are plenty of interesting beers and beer history to discover. Kanagawa Factory is one of nine factories of the Kirin Brewery Company, Limited (Chitose, Sendai, Toride, Yokohama, Nagoya, Shiga, Kobe, Okayama, and Fukuoka). Yokohama factory offers free tours that last around 80 minutes.
-  A Tour of the Beer Factory.",
-  start_time: 16,
+  content: "Asahi Beer Hall was opened nearby Kyoto in 1896 to promote the
+  companys beer to thirsty tourist. By 1901 it was the second biggest brewery in Japan.",
+  start_time: rand(Date.today..Date.today+30.days),
   duration: 1,
   user: kim
 )
@@ -87,10 +78,8 @@ sapporo = Tour.new(
   name: "Sapporo Beer",
   address: "1 Chome-2-8 Namamugi, Tsurumi Ward, Yokohama, Kanagawa",
   price: 500,
-  content: "Do you want to build a snowman? There is always beer to drink. As beer is the most popular alcoholic drink in Japan there are plenty of interesting beers and beer history to discover. Sapporo Factory is one of nine factories of the Kirin Brewery Company, Limited (Chitose, Sendai, Toride, Yokohama, Nagoya, Shiga, Kobe, Okayama, and Fukuoka). Yokohama factory offers free tours that last around 80 minutes.
-  A Tour of the Beer Factory
-  The tour winds its way arund parts of the factory, offering views from above through observation windows of various parts of the manufacturing process.",
-  start_time: 11,
+  content: "Sapporo is the oldest brand of beer in Japan. It was first brewed in Sapporo, Japan, in 1876 by brewer Seibei Nakagawa.",
+  start_time: rand(Date.today..Date.today+30.days),
   duration: 3,
   user: kim
 )
@@ -99,11 +88,9 @@ sapporo.save!
 ebisu = Tour.new(
   name: "Ebisu Garden Place",
   address: "4 Chome-2-8 Shibakoen, Tokyo",
-  price: 6500,
-  content: "As beer is the most popular alcoholic drink in Japan there are plenty of interesting beers and beer history to discover. Sapporo Factory is one of nine factories of the Kirin Brewery Company, Limited (Chitose, Sendai, Toride, Yokohama, Nagoya, Shiga, Kobe, Okayama, and Fukuoka). Yokohama factory offers free tours that last around 80 minutes.
-  A Tour of the Beer Factory
-  The tour winds its way arund parts of the factory, offering views from above through observation windows of various parts of the manufacturing process. As you watch, thousands of cans and bottles of beer go shooting through factory machines at incredibly high speeds! According to the guide, 2000 cans of beer are filled and packed each and every minute. Near the end of the tour, a series of panels of Kirin’s history are on display.",
-  start_time: 11,
+  price: 2000,
+  content: "Yebisu Beer was established in 1890. As shipments increased, the brewery got its own railway freight station in 1901. The current JR Ebisu Station, situated closer to Shibuya Station, opened in 1906 for passenger service.",
+  start_time: rand(Date.today..Date.today+30.days),
   duration: 4,
   user: takeshi
 )
@@ -112,49 +99,101 @@ ebisu.save!
 hoegaarden = Tour.new(
   name: "Hoegaarden Brewery",
   address: "5 Chome-1 Kaigandori, Minato Ward, Osaka",
-  price: 6500,
-  content: "Green is my favorite drink. As beer is the most popular alcoholic drink in Japan there are plenty of interesting beers and beer history to discover. Sapporo Factory is one of nine factories of the Kirin Brewery Company, Limited (Chitose, Sendai, Toride, Yokohama, Nagoya, Shiga, Kobe, Okayama, and Fukuoka). Yokohama factory offers free tours that last around 80 minutes.
-  A Tour of the Beer Factory
-  The tour winds its way arund parts of the factory, offering views from above through observation windows of various parts of the manufacturing process.",
-  start_time: 14,
+  price: 3500,
+  content: "Hoegaarden is a Belgian witbier named after a small town in the Flemish region of Belgium that is famous for the white style of beer.",
+  start_time: rand(Date.today..Date.today+30.days),
   duration: 2,
   user: colin
 )
 hoegaarden.save!
 
+heineken = Tour.new(
+  name: "Heineken",
+  address: "5 Chome-1 Kaigandori, Minato Ward, Osaka",
+  price: 2500,
+  content: "Heineken was introduced in 1873 in the Netherlands. On February 10 1864, Gerard Adriaan Heineken bought the haystack brewery in Amsterdam.",
+  start_time: rand(Date.today..Date.today+30.days),
+  duration: 2,
+  user: colin
+)
+heineken.save!
+
 guiness = Tour.new(
   name: "Guinness Storehouse",
   address: "10 Chome-1 Kaigandori, Minato Ward, Osaka",
   price: 10_000,
-  content: "Making innovative beer requires an unprecedented pioneering spirit and an indomitable spirit of pursuing perfection. In 1759, Arthur Guinness signs a 9000-year lease with St. James Gate Brewery. Shortly thereafter, Guinness began to entertain in various countries across the sea. Guinness's pioneering spirit has been passed down uninterrupted and has continued to evolve over time. As long as we have beer to continue to make, we will continue to move forward.",
-  start_time: 9,
+  content: "Guinness's pioneering spirit has been passed down uninterrupted and has continued to evolve over time.",
+  start_time: rand(Date.today..Date.today+30.days),
   duration: 1,
-  user: takeshi
+  user: colin
 )
 guiness.save!
 
 singha = Tour.new(
   name: "Boon Rod Brewery",
   address: "999 Samsen Road, Dusit, Bangkok 10300 Thailand",
-  price: 3000,
-  content: "Boon Rawd Brewery was the first to open in Thailand and produces its beer under the brand name of Singha. It was founded in the early 1930s by Boonrawd Sreshthaputra, who had received the title of Phraya Bhirom Bhakdi from HM King Prajadhipok. The brewery remains under the management of his descendants, who use Bhirom Bhakdi as their family name.
-  The Singha is an Asian lion, but in both Hindu and Thai traditional tales, it is a powerful mythological creature. It was chosen because it is an easily recognizable symbol.",
-  start_time: 10,
+  price: 300,
+  content: "Boon Rawd Brewery was the first to open in Thailand and produces its beer under the brand name of Singha.",
+  start_time: rand(Date.today..Date.today+30.days),
   duration: 4,
   user: kim
 )
 singha.save!
 
+chang = Tour.new(
+  name: "Elephant Beer",
+  address: "100 Samsen Road, Dusit, Bangkok 10300 Thailand",
+  price: 200,
+  content: "Chang is a delicious beer, the logo is the elephant",
+  start_time: rand(Date.today..Date.today+30.days),
+  duration: 4,
+  user: kim
+)
+chang.save!
+
+corona = Tour.new(
+  name: "Corona",
+  address: "Colonia El Parque, Delegación Venustiano Carranza",
+  price: 666,
+  content: "Corona is the  best beer to enjoy during the pandemic",
+  start_time: rand(Date.today..Date.today+30.days),
+  duration: 4,
+  user: kim
+)
+corona.save!
+
+tsing = Tour.new(
+  name: "TsingTao",
+  address: "1 Legislative Council Road, Central, Hong Kong",
+  price: 666,
+  content: "True HongKong Beer. Tastes like water",
+  start_time: rand(Date.today..Date.today+30.days),
+  duration: 4,
+  user: kim
+)
+tsing.save!
+
 blanche = Tour.new(
   name: "Blanche de Bruxelles",
   address: "1 Chome-1 Kaigandori, Minato Ward, Osaka",
   price: 6000,
-  content: "The Lefebvre brewery created this wonderful brew and proudly presents this product at our online store. Blanche de Bruxelles is white coloured and has quite a full and creamy head. This glorious craft beer has a beautiful body and a wonderful aroma. 5 generations ago the Lefebvre brewery started brewing this gorgeous wheat beer. They use water, barley malt, wheat, hop, sugar, yeast and coriander. The brewery advises to serve this bright beer at 2 to 5°C.",
-  start_time: 10,
+  content: "This glorious craft beer has a beautiful body and a wonderful aroma.",
+  start_time: rand(Date.today..Date.today+30.days),
   duration: 2,
   user: colin
 )
 blanche.save!
+
+maredsous = Tour.new(
+  name: "Maredsous",
+  address: "Rue de Maredsous 11, 5537 Anhée, Belgium",
+  price: 800,
+  content: "Colin recommends this beer, a must try.",
+  start_time: rand(Date.today..Date.today+30.days),
+  duration: 2,
+  user: colin
+)
+maredsous.save!
 
 booking_a = Booking.new(
   schedule: "2pm : 4pm",
