@@ -1,13 +1,11 @@
 <div class="card-product mb-4 p-4 border border-primary border-2">
-
-        <%= image_tag(tour.photo.attached? ? cl_image_path(tour.photo.key) : "brew_photos/#{rand(12)}.jpg") %>
-        <div class="ms-4 card-product-infos">
-        <h2><%= tour.name %></h2>
-        <p><%= tour.address %></p>
-        <p><strong>¥<%= tour.price %></p></strong>
-        <p><%= tour.content %></p>
-        <% if tour.user != current_user %>
-          <%= link_to '', tour_path(tour), class: 'card-link' %>
-        <% end %>
+  <%= image_tag(tour.photo.attached? ? cl_image_path(tour.photo.key) : "brew_photos/#{rand(12)}.jpg") %>
+  <div class="ms-4 card-product-infos">
+    <h2><%= tour.name %></h2>
+    <small><%= tour.address %></small>
+    <p><strong>¥<%= tour.price %></p>
+    </strong>
+    <p><%= tour.content %></p>
+    <%= link_to '', tour_path(tour), class: 'card-link' %>
   </div>
 </div>
