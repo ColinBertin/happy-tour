@@ -3,27 +3,27 @@
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "https://i.ibb.co/42sYjZg/logo.png" %>
     <% end %>
-
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ">
-            <li class="nav-item button">
-            <%= link_to 'See all Tours', tours_path, class:"nav-link" %>
-            </li>
-              <% if user_signed_in? %>
-
-            &nbsp;
-            &nbsp;
-            &nbsp;
+        <li class="nav-item button">
+          <%= link_to 'See all Tours', tours_path, class:"nav-link" %>
+        </li>
+        <% if user_signed_in? %>
+          &nbsp;
+          &nbsp;
+          &nbsp;
           <li class="nav-item dropdown">
-          <%= image_tag "https://images.pexels.com/photos/1552630/pexels-photo-1552630.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= image_tag "https://images.pexels.com/photos/1552630/pexels-photo-1552630.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Your Bookings", bookings_path, method: :get, class: "dropdown-item" %>
               <%= link_to "Add a tour", new_tour_path, method: :get, class: "dropdown-item" %>
-              <%= link_to "Your Tours", owner_tours_path, method: :get, class: "dropdown-item" %>
-              <%= link_to "Your cutomers booking", owner_bookings_path, method: :get, class: "dropdown-item" %>
+              <% if current_user.tours.any? %>
+                <%= link_to "Your Tours", owner_tours_path, method: :get, class: "dropdown-item" %>
+                <%= link_to "Your cutomers booking", owner_bookings_path, method: :get, class: "dropdown-item" %>
+              <% end %>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
           </li>

@@ -34,8 +34,11 @@
               <p><%= @tour.duration%> hour tour with drinks</p>
               <%# <%= f.input :start_time, html5: true %>
               <%= f.input :schedule, collection: [@tour.start_time.strftime("%m/%d/%Y") ] %>
+
               <%= f.input :participant, html5: true %>
-              <%= f.submit class: "btn btn-primary w-100 rounded-8" %>
+              <% if @tour.user != current_user %>
+                <%= f.submit class: "btn btn-primary w-100 rounded-8" %>
+              <% end %>
             <% end %>
           <% else %>
             <%= link_to "Login", new_user_session_path, class: "btn btn-primary w-100 rounded-8" %>
