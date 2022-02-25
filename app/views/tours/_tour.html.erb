@@ -1,4 +1,5 @@
 <div class="card-product mb-4 p-4 border border-primary border-2">
+
         <%= image_tag(tour.photo.attached? ? cl_image_path(tour.photo.key) : "brew_photos/#{rand(12)}.jpg") %>
         <div class="ms-4 card-product-infos">
         <h2><%= tour.name %></h2>

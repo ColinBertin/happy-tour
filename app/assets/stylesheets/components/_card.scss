@@ -41,9 +41,11 @@
   display: flex;
   align-items: center;
   position: relative;
+
   &:hover {
     box-shadow: 0px 8px 15px rgba(89, 88, 70, 0.4);
     background-color: #e7decb;
+
   }
 }
 
