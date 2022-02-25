@@ -8,7 +8,7 @@ class Booking < ApplicationRecord
 
   # Validations
   # validates :schedule, inclusion: { in: TIMESLOT }
-  validates :participant, inclusion: { in: PARTICIPANTS}
+  validates :participant, presence: true
   enum confirmation: {
     pending: 0,
     confirmed: 1,

@@ -7,6 +7,8 @@ class Tour < ApplicationRecord
   has_many :users, through: :bookings # Client user
   has_one_attached :photo
 
+#  TIME = [Time.]
+
   # Validations
   validates :name, presence: true
   validates :address, presence: true
