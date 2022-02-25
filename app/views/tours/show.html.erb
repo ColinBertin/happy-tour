@@ -20,7 +20,6 @@
         <div class="d-flex justify-content-between mt-3">
           <h3>Request a Tour</h3>
         </div>
-        <i>90 mins. per tour </i>
         <!-- date may require to be connected to db -->
         <div class="form-group mb-3">
         </div>
@@ -31,9 +30,8 @@
           <div class="d-flex justify-content-end mb-3">
             <h2><%= number_to_currency(@tour.price, {unit: '¥', precision: 0}) %></h2>
               </div>
-
             <%= simple_form_for [ @tour, @booking ] do |f| %>
-              <%= f.input :schedule, collection: Booking::TIMESLOT, include_blank: false %>
+              <%= f.input :schedule, collection: ['14:00','18:00']  %>
               <%= f.input :participant, html5: true %>
               <%= f.submit class: "btn btn-primary w-100 rounded-8" %>
             <% end %>

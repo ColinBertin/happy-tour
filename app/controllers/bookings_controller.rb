@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: [ :update ]
+  before_action :set_booking, only: [:update]
 
   def index
     @bookings = policy_scope(Booking).order(created_at: :desc)
