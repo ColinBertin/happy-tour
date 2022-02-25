@@ -3,7 +3,21 @@
   <% @bookings.each do |booking|%>
     <h2><%= booking.tour.name %></h2>
     <p><%= booking.schedule %></p>
-    <p>The customer's name is: <%= booking.user.first_name %></p>
-    <p class="border-bottom">The owner of this tour is: <%= booking.tour.user.first_name %></p>
+    <div class="d-flex">
+      <% if booking.pending? %>
+        <%= simple_form_for booking do |f| %>
+          <%= f.input :confirmation, as: :hidden, input_html: { value: 'confirmed'} %>
+          <%= f.submit 'Accept', class: 'btn btn-info me-3 border-2' %>
+        <% end %>
+        <%= simple_form_for booking do |f| %>
+          <%= f.input :confirmation, as: :hidden, input_html: { value: 'rejected'} %>
+          <%= f.submit 'Reject', class: 'btn btn-danger text-white border-2' %>
+        <% end %>
+        <!-- Display Forms-->
+      <% else %>
+        <!-- Display Status-->
+        <p class='booking-tag'><%= booking.confirmation %></p>
+      <% end %>
+    </div>
   <% end %>
 </div>
