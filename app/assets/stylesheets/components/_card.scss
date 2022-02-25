@@ -70,3 +70,8 @@
   margin-bottom: 0;
   margin-top: 8px;
 }
+
+.card-content {
+  max-height: 100px;
+  overflow: hidden;
+}

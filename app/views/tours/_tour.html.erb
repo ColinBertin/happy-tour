@@ -3,9 +3,8 @@
   <div class="ms-4 card-product-infos">
     <h2><%= tour.name %></h2>
     <small><%= tour.address %></small>
-    <p><strong>¥<%= tour.price %></p>
-    </strong>
-    <p><%= tour.content %></p>
+    <p class="card-content"><%= tour.content %></p>
+    <p><strong>¥<%= tour.price %></strong><small>/pp</small></p>
     <%= link_to '', tour_path(tour), class: 'card-link' %>
   </div>
 </div>
