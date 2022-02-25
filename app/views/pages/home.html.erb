@@ -1,13 +1,13 @@
 <div class="background-photo d-inline-flex justify-content-center align-items-center">
   <div class="container w-50 text-center align-items-center">
     <h1>Explore Local Breweries</h1>
-    <%= form_tag tours_path, method: :get do %>
+    <%= form_tag tours_path, method: :get, class:"d-flex align-items space-beween" do %>
         <%= text_field_tag :query,
             params[:query],
-            class: "form-control d-flex align-items space-beween",
+            class: "form-control",
             placeholder: "Start now"
         %>
-        <%= submit_tag "search" %>
+        <%= submit_tag "search", class:"button rounded-0 rounded-left" %>
   <% end %>
   </div>
 </div>
