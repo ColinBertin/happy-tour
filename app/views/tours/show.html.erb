@@ -28,7 +28,7 @@
           </div>
           <% if user_signed_in? %>
           <div class="d-flex justify-content-end mb-3">
-          <h2><%= number_to_currency(@tour.price, {unit: '¥', precision: 0}) %></h2>
+            <h2><%= number_to_currency(@tour.price, {unit: '¥', precision: 0}) %></h2>
               </div>
             <%= simple_form_for [ @tour, @booking ] do |f| %>
               <%= f.input :schedule, collection: ['14:00','18:00']  %>

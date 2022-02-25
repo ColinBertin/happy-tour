@@ -6,7 +6,11 @@ class Booking < ApplicationRecord
   PARTICIPANTS = [ 1, 2, 3, 4, 5]
 
   # Validations
+
   validates :schedule, presence: true
+
+  # validates :schedule, inclusion: { in: TIMESLOT }
+
   validates :participant, inclusion: { in: PARTICIPANTS}
   enum confirmation: {
     pending: 0,

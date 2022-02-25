@@ -18,6 +18,7 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 gem 'pundit'
+gem "geocoder"
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -32,10 +33,12 @@ gem 'bootsnap', '>= 1.4.4', require: false
 # additonal dependencies
 gem 'devise'
 gem 'faker'
+gem 'pg_search', '~> 2.3.0'
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'cloudinary', '~> 1.16.0'
+gem 'geocoder'
 
 
 group :development, :test do
