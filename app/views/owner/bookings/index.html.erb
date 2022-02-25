@@ -1,23 +1,26 @@
 <div class="container">
-  <h1>Your Bookings</h1>
+  <h1 class = "m-4">Your Bookings</h1>
   <% @bookings.each do |booking|%>
-    <h2><%= booking.tour.name %></h2>
-    <p><%= booking.schedule %></p>
-    <div class="d-flex">
-      <% if booking.pending? %>
-        <%= simple_form_for booking do |f| %>
-          <%= f.input :confirmation, as: :hidden, input_html: { value: 'confirmed'} %>
-          <%= f.submit 'Accept', class: 'btn btn-info me-3 border-2' %>
+    <div class="card-no-hover m-4 p-4 border border-primary border-2">
+      <h2><%= booking.tour.name %></h2>
+      <p><%= booking.schedule %></p>
+      <div class="d-flex">
+        <% if booking.pending? %>
+          <%= simple_form_for booking do |f| %>
+            <%= f.input :confirmation, as: :hidden, input_html: { value: 'confirmed'} %>
+            <%= f.submit 'Accept', class: 'btn btn-info me-3 border-2' %>
+          <% end %>
+          <%= simple_form_for booking do |f| %>
+            <%= f.input :confirmation, as: :hidden, input_html: { value: 'rejected'} %>
+            <%= f.submit 'Reject', class: 'btn btn-danger text-white border-2' %>
+          <% end %>
+          <!-- Display Forms-->
+        <% else %>
+          <!-- Display Status-->
+          <p class='booking-tag'><%= booking.confirmation %></p>
         <% end %>
-        <%= simple_form_for booking do |f| %>
-          <%= f.input :confirmation, as: :hidden, input_html: { value: 'rejected'} %>
-          <%= f.submit 'Reject', class: 'btn btn-danger text-white border-2' %>
-        <% end %>
-        <!-- Display Forms-->
-      <% else %>
-        <!-- Display Status-->
-        <p class='booking-tag'><%= booking.confirmation %></p>
-      <% end %>
-    </div>
-  <% end %>
+      </div>
+        </div>
+
+    <% end %>
 </div>
