@@ -28,13 +28,12 @@
           </div>
           <% if user_signed_in? %>
             <div class="d-flex justify-content-end mb-3">
-              <h2><%= number_to_currency(@tour.price, {unit: '¥', precision: 0}) %></h2>
+              <h2><%= number_to_currency(@tour.price, {unit: '¥', precision: 0}) %> Per Person</h2>
             </div>
             <%= simple_form_for [ @tour, @booking ] do |f| %>
               <p><%= @tour.duration%> hour tour with drinks</p>
               <%# <%= f.input :start_time, html5: true %>
               <%= f.input :schedule, collection: [@tour.start_time.strftime("%H:%M on %m/%d/%Y") ] %>
-
               <%= f.input :participant, html5: true %>
               <% if @tour.user != current_user %>
                 <%= f.submit class: "btn btn-primary w-100 rounded-8" %>
