@@ -64,9 +64,9 @@ ActiveRecord::Schema.define(version: 2022_02_24_062216) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "duration", default: 14, null: false
-    t.datetime "start_time"
     t.float "latitude"
     t.float "longitude"
+    t.datetime "start_time"
     t.index ["user_id"], name: "index_tours_on_user_id"
   end
 
