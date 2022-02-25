@@ -1,15 +1,15 @@
 <div class="container">
-<div class = "card-no-hover p-4 m-4 border border-primary border-2">
-  <h1>Add a new tour</h1>
-  <%= simple_form_for(@tour) do |f| %>
-    <%= f.input :name, placeholder: 'Name of the tour' %>
-    <%= f.input :address, placeholder: 'Address' %>
-    <%= f.input :price, value: '¥1200' %>
-    <%= f.input :content, placeholder: 'Please explain the contant of your tour...' %>
-    <%= f.input :start_time, html5: true %>
-    <%= f.input :duration, :collection => 1..5 %>
-    <%= f.input :photo, as: :file %>
-    <%= f.submit class: 'button mt-2 wt-100' %>
-  <% end %>
+  <div class = "card-no-hover p-4 m-4 border border-primary border-2">
+    <h1 class="mt-4 mb-4">Add a new tour</h1>
+    <%= simple_form_for(@tour) do |f| %>
+      <%= f.input :name, placeholder: 'Name of the tour' %>
+      <%= f.input :address, placeholder: 'Address' %>
+      <%= f.input :price, value: '¥1200' %>
+      <%= f.input :content, placeholder: 'Please explain the contant of your tour...' %>
+      <%= f.input :start_time, html5: true %>
+      <%= f.input :duration, :collection => 1..5 %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit class: 'button mt-2 wt-100' %>
+    <% end %>
   </div>
 </div>
