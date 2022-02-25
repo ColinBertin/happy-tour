@@ -6,8 +6,11 @@
       <% @tours.each do |tour| %>
         <%= render "tours/tour", tour: tour %>
       <% end %>
-    </div>
-    <div class="col-lg-6 mt-5" id="top-div">
+    <% end %>
+  </div>
+
+
+<div class="col-lg-6 mt-5" id="map">
       <div class="index-right" style="width: 100%; height: 100vh;"
   data-controller="mapbox"
   data-mapbox-markers-value="<%= @markers.to_json %>"
