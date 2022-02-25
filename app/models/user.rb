@@ -6,7 +6,7 @@ class User < ApplicationRecord
   # Associations
   has_many :bookings
   has_many :bookings_as_owner, through: :tours, source: :bookings
-  has_many :tours, through: :bookings
+  has_many :tours
 
   # Validations
   validates :first_name, presence: true
