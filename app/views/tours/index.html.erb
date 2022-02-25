@@ -1,22 +1,18 @@
-
 <div class="container">
-<div class="row">
-<div class="col-lg-6" id="top-div">
-    <strong><h1><%= @tours.length %></strong> HappyTours are Available</h1>
-    <% @tours.each do |tour| %>
-      <% if tour.user != current_user %>
+  <div class="row">
+    <div class="col-lg-6" id="top-div">
+      <strong>
+        <h1><%= @tours.length %></strong> HappyTours are Available</h1>
+      <% @tours.each do |tour| %>
         <%= render "tours/tour", tour: tour %>
       <% end %>
-    <% end %>
-  </div>
-
-
-<div class="col-lg-6 mt-5" id="top-div">
+    </div>
+    <div class="col-lg-6 mt-5" id="top-div">
       <div class="index-right" style="width: 100%; height: 100vh;"
   data-controller="mapbox"
   data-mapbox-markers-value="<%= @markers.to_json %>"
   data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
     </div>
   </div>
-</div>
 </div>
