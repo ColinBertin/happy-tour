@@ -22,8 +22,6 @@ rails db:seed`
 ### How to use
 
 As a breweries owner, you may create and schedule your own tours.
-
-
 As a tourist, you may book tours directly through this app.
 
 ## Built with
@@ -36,16 +34,13 @@ As a tourist, you may book tours directly through this app.
 * <a href="https://www.mapbox.com/">Mapbox</a> 
 
 ## Time spent 
-9 days
+5 days
 
 ## Authors
 
 * **<a href="https://github.com/ColinBertin">Colin Bertin</a> 
 * **<a href="https://github.com/madebytak">Takeshi Shinohara</a> 
 * **<a href="https://github.com/Sleepycatfuji"> Duangrudee Methakullachat</a> 
-
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
